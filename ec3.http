@@ -1,0 +1,24 @@
+@server = http://localhost:8080
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
+###
+GET {{api}}/categoria
+###
+POST {{api}}/categoria
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+################ Instrumentos: ################
+###
+GET {{api}}/instrumento
+###
+POST {{api}}/instrumento
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost8080/api/ec3/categorias/1"}
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
+
